@@ -8,6 +8,13 @@ body {
     height: 100%;
     display: table-cell;
     vertical-align: middle;
+    user-select: none;
+    transition: all 1s;
+}
+a {
+    width: 10%;
+    min-width: 30px;
+    max-width: 100px;
 }
 .row {
     display: flex;
@@ -28,7 +35,9 @@ body {
     justify-content: space-between;
 }
 .icon {
-    width: 10%;
-    max-width: 100px;
-    padding: 0 25px 0 25px;
+    width: 100%;
+}
+.icon:hover + body {
+    background-color: blue;
+    filter: invert(0.5);
 }
