@@ -29,10 +29,11 @@ a {
 }
 .buttons {
     width: 75%;
-    max-width: 1200px;
+    max-width: 900px;
     padding-bottom: 40px;
     display: flex;
     justify-content: space-between;
+    transition: all 1s;
 }
 .icon {
     width: 100%;

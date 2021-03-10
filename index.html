@@ -13,7 +13,7 @@
         <img class="title" src="assets/title.png">
         <div class="buttons">
             <a href="https://www.behance.net/ArekZajac" target="_blank">
-                <img class="icon" src="assets/behance b.png" onmouseover="behanceHover()" onmouseout="behanceDefault()">
+                <img class="icon" src="assets/behance b.png" onmouseover="this.src='assets/behance a.png'" onmouseout="this.src='assets/behance b.png'">
             </a>
             <a href="https://github.com/ArekZajac" target="_blank">
                 <img class="icon" src="assets/github b.png" onmouseover="this.src='assets/github a.png'" onmouseout="this.src='assets/github b.png'">
@@ -33,44 +33,4 @@
 </html>
 
 <script>
-    function behanceDefault() {
-        document.body.style.backgroundColor="black";
-        this.src='assets/behance b.png'
-    }
-    function behanceHover() {
-        document.body.style.backgroundColor="#031330";
-        this.src='assets/behance a.png'
-    }
-    function githubDefault() {
-        document.body.style.backgroundColor="black";
-        this.src='assets/behance b.png'
-    }
-    function githunHover() {
-        document.body.style.backgroundColor="#031330";
-        this.src='assets/behance a.png'
-    }
-    function discordDefault() {
-        document.body.style.backgroundColor="black";
-        this.src='assets/behance b.png'
-    }
-    function discordHover() {
-        document.body.style.backgroundColor="#031330";
-        this.src='assets/behance a.png'
-    }
-    function instaDefault() {
-        document.body.style.backgroundColor="black";
-        this.src='assets/behance b.png'
-    }
-    function instaHover() {
-        document.body.style.backgroundColor="#031330";
-        this.src='assets/behance a.png'
-    }
-    function twitterDefault() {
-        document.body.style.backgroundColor="black";
-        this.src='assets/behance b.png'
-    }
-    function twitterHover() {
-        document.body.style.backgroundColor="#031330";
-        this.src='assets/behance a.png'
-    }
 </script>
