@@ -18,27 +18,46 @@
 </head>
 <body>
     <div class="row">
-        <img class="title" src="assets/title.png">
+        <img class="title" src="assets/images/title.png">
         <div class="buttons">
             <a href="https://www.behance.net/ArekZajac" target="_blank">
-                <img class="icon" src="assets/behance b.png" onmouseover="this.src='assets/behance a.png'" onmouseout="this.src='assets/behance b.png'">
+                <img class="icon" src="assets/images/behance b.png" onmouseover="this.src='assets/images/behance a.png'" onmouseout="this.src='assets/images/behance b.png'">
             </a>
             <a href="https://github.com/ArekZajac" target="_blank">
-                <img class="icon" src="assets/github b.png" onmouseover="this.src='assets/github a.png'" onmouseout="this.src='assets/github b.png'">
+                <img class="icon" src="assets/images/github b.png" onmouseover="this.src='assets/images/github a.png'" onmouseout="this.src='assets/images/github b.png'">
             </a>
-            <a href="https://discord.com/" target="_blank">
-                <img class="icon" src="assets/discord b.png" onmouseover="this.src='assets/discord a.png'" onmouseout="this.src='assets/discord b.png'">
+            <a onclick="copyToClipboard('arek#2222')">
+                <img class="icon" src="assets/images/discord b.png" onmouseover="this.src='assets/images/discord a.png'" onmouseout="this.src='assets/images/discord b.png'">
             </a>
             <a href="https://www.instagram.com/arek.pz/" target="_blank">
-                <img class="icon" src="assets/insta b.png" onmouseover="this.src='assets/insta a.png'" onmouseout="this.src='assets/insta b.png'">
+                <img class="icon" src="assets/images/insta b.png" onmouseover="this.src='assets/images/insta a.png'" onmouseout="this.src='assets/images/insta b.png'">
             </a>
             <a href="https://twitter.com/arek_pz" target="_blank">
-                <img class="icon" src="assets/twitter b.png" onmouseover="this.src='assets/twitter a.png'" onmouseout="this.src='assets/twitter b.png'">
+                <img class="icon" src="assets/images/twitter b.png" onmouseover="this.src='assets/images/twitter a.png'" onmouseout="this.src='assets/images/twitter b.png'">
             </a>
         </div>
+    </div>
+    <div class="row">
+        <span id="tooltip">COPIED TO CLIPBOARD</span>
     </div>
 </body>
 </html>
 
 <script>
+    function copyToClipboard(text) {
+        const elem = document.createElement('textarea');
+        elem.value = text;
+        document.body.appendChild(elem);
+        elem.select();
+        document.execCommand('copy');
+        document.body.removeChild(elem);
+
+        buttonSuccess();
+    }
+    function buttonSuccess() {
+        document.getElementById("tooltip").style.display = "block";
+        setTimeout( function() {
+            document.getElementById("tooltip").style.display = "none";
+        }, 1000);
+    }
 </script>

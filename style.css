@@ -1,7 +1,12 @@
+@font-face {
+    font-family: OpenSans-Regular;
+    src: url(assets/fonts/OpenSans-Regular.ttf);
+}
 html {
     height: 100%;
     display: table;
     margin: auto;
+    font-family: OpenSans-Regular;
 }
 body {
     background-color: black;
@@ -15,6 +20,7 @@ a {
     width: 10%;
     min-width: 30px;
     max-width: 100px;
+    cursor: pointer;
 }
 .row {
     display: flex;
@@ -41,4 +47,16 @@ a {
 .icon:hover + body {
     background-color: blue;
     filter: invert(0.5);
+}
+#tooltip {
+    color: white;
+    display: none;
+    position: fixed;
+    transform: translate(0, -30px);
+    opacity: 1;
+    animation: fade 1s linear;
+}
+@keyframes fade {
+    0%,100% { opacity: 0 }
+    50% { opacity: 1 }
 }
